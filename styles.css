@@ -2005,6 +2005,7 @@ h2 em {
     width: 100% !important;
     align-self: stretch;
     margin-left: 0;
+    gap: 1.5rem;
   }
 
   .collage__row--solo {
@@ -2210,6 +2211,7 @@ h2 em {
     width: 100% !important;
     align-self: stretch;
     margin-left: 0;
+    gap: 1.25rem;
   }
 
   .collage__item {
