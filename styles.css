@@ -245,7 +245,7 @@ svg {
 .brand__place {
   color: var(--muted);
   font-family: "Montserrat", "DM Sans", Arial, sans-serif;
-  font-size: 0.52rem;
+  font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -480,7 +480,7 @@ svg {
   justify-content: space-between;
   width: 100%;
   color: rgba(248, 248, 245, 0.7);
-  font-size: 0.61rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -587,7 +587,7 @@ svg {
 
 .hero__intro p:last-child {
   color: var(--muted);
-  font-size: 0.67rem;
+  font-size: 0.78rem;
 }
 
 .hero__copy {
@@ -646,7 +646,7 @@ svg {
   align-items: center;
   gap: 0.7rem;
   color: var(--muted);
-  font-size: 0.54rem;
+  font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -692,7 +692,7 @@ svg {
 .manifesto__kicker {
   padding-top: 1rem;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.17em;
   text-transform: uppercase;
 }
@@ -737,7 +737,7 @@ h2 em {
 
 .manifesto__story > p:not(.lead) {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 1.75;
 }
 
@@ -748,7 +748,7 @@ h2 em {
   margin-top: 2.5rem;
   padding-bottom: 0.55rem;
   border-bottom: 1px solid var(--line);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -802,7 +802,7 @@ h2 em {
   align-self: end;
   padding-bottom: 0.5rem;
   color: var(--muted);
-  font-size: 0.71rem;
+  font-size: 0.82rem;
   line-height: 1.65;
 }
 
@@ -880,8 +880,6 @@ h2 em {
   text-transform: uppercase;
 }
 
-}
-
 .cuisine {
   padding-top: clamp(2rem, 4vw, 3.5rem);
   padding-bottom: clamp(2rem, 4vw, 3.5rem);
@@ -928,7 +926,7 @@ h2 em {
   max-width: 24rem;
   padding-bottom: 0.5rem;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
 
@@ -942,6 +940,36 @@ h2 em {
 
 .cuisine__header p a:hover {
   color: var(--muted);
+}
+
+.collage__hint {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-family: "Montserrat", "DM Sans", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.collage__hint svg {
+  width: 1rem;
+  animation: hint-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes hint-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
 }
 
 .collage {
@@ -1197,7 +1225,7 @@ h2 em {
 .collage-modal__type {
   color: var(--muted);
   font-family: "Montserrat", "DM Sans", Arial, sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1227,7 +1255,7 @@ h2 em {
   padding: 0.9rem 1.4rem;
   border: 1px solid var(--line);
   font-family: "Montserrat", "DM Sans", Arial, sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1268,7 +1296,7 @@ h2 em {
   width: min(100%, 22rem);
   padding: 1rem 1.2rem;
   border: 1px solid var(--line);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1294,6 +1322,14 @@ h2 em {
   grid-template-columns: 0.8fr 1.2fr;
   gap: clamp(3rem, 7vw, 8rem);
   margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.atmosphere:nth-of-type(even) .atmosphere__copy {
+  order: 2;
+}
+
+.atmosphere:nth-of-type(even) .atmosphere__image {
+  order: 1;
 }
 
 .atmosphere h2 {
@@ -1364,7 +1400,7 @@ h2 em {
   margin-bottom: 1.7rem;
   color: var(--muted);
   font-family: var(--sans);
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   letter-spacing: 0.12em;
 }
 
@@ -1391,7 +1427,7 @@ h2 em {
 }
 
 .statement span {
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1439,7 +1475,7 @@ h2 em {
 }
 
 .visit__live-status p {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -1453,7 +1489,7 @@ h2 em {
 
 .hours h3 {
   margin-bottom: 1.7rem;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.17em;
   text-transform: uppercase;
@@ -1516,7 +1552,7 @@ h2 em {
 .visit__detail > p {
   margin-bottom: 0.5rem;
   color: var(--muted);
-  font-size: 0.56rem;
+  font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1569,7 +1605,7 @@ h2 em {
   display: block;
   margin-bottom: 0.3rem;
   color: #656565;
-  font-size: 0.52rem;
+  font-size: 0.6rem;
   font-weight: 500;
 }
 
@@ -1604,7 +1640,7 @@ h2 em {
   display: flex;
   gap: 1.5rem;
   color: var(--muted);
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1613,7 +1649,7 @@ h2 em {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1645,7 +1681,7 @@ h2 em {
 .social__header > div > p {
   margin-bottom: 1.5rem;
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1710,7 +1746,7 @@ h2 em {
   left: 1rem;
   opacity: 0;
   transform: translateY(0.5rem);
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.11em;
   text-align: center;
@@ -1740,7 +1776,7 @@ h2 em {
 
 .site-footer__top > p {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1789,7 +1825,7 @@ h2 em {
   padding-top: 1.4rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.57rem;
+  font-size: 0.65rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -1810,31 +1846,8 @@ h2 em {
 .photo-credit {
   margin-top: 1rem;
   color: #62625e;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   letter-spacing: 0.06em;
-}
-
-.mobile-reserve {
-  position: fixed;
-  z-index: 80;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  left: 0.75rem;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.2rem;
-  background: var(--white);
-  color: var(--ink);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.35);
-}
-
-.mobile-reserve svg {
-  width: 1.15rem;
 }
 
 @media (max-width: 1100px) {
@@ -2070,10 +2083,6 @@ h2 em {
 @media (max-width: 620px) {
   :root {
     --shell: 88vw;
-  }
-
-  body {
-    padding-bottom: 4.4rem;
   }
 
   .section {
@@ -2321,10 +2330,6 @@ h2 em {
 
   .site-footer__bottom > p:last-child {
     align-self: flex-start;
-  }
-
-  .mobile-reserve {
-    display: flex;
   }
 }
 
