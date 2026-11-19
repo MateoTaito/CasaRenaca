@@ -91,12 +91,12 @@ if ("IntersectionObserver" in window) {
 
 const schedule = {
   mon: null,
-  tue: { open: 12 * 60 + 30, close: 17 * 60, label: "12:30 - 17:00" },
-  wed: { open: 12 * 60 + 30, close: 17 * 60, label: "12:30 - 17:00" },
-  thu: { open: 12 * 60 + 30, close: 22 * 60, label: "12:30 - 22:00" },
-  fri: { open: 12 * 60 + 30, close: 22 * 60, label: "12:30 - 22:00" },
-  sat: { open: 12 * 60 + 30, close: 22 * 60, label: "12:30 - 22:00" },
-  sun: { open: 12 * 60 + 30, close: 17 * 60, label: "12:30 - 17:00" },
+  tue: { open: 13 * 60, close: 22 * 60, label: "13:00 - 22:00" },
+  wed: { open: 13 * 60, close: 22 * 60, label: "13:00 - 22:00" },
+  thu: { open: 13 * 60, close: 23 * 60, label: "13:00 - 23:00" },
+  fri: { open: 13 * 60, close: 23 * 60, label: "13:00 - 23:00" },
+  sat: { open: 13 * 60, close: 23 * 60, label: "13:00 - 23:00" },
+  sun: { open: 13 * 60, close: 17 * 60, label: "13:00 - 17:00" },
 };
 
 const dayOrder = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
@@ -173,3 +173,48 @@ openingStatus();
 window.setInterval(openingStatus, 60000);
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+const collageItems = document.querySelectorAll("[data-collage-item]");
+const collageModal = document.querySelector("[data-collage-modal]");
+const collageModalImg = collageModal.querySelector(".collage-modal__img");
+const collageModalType = collageModal.querySelector(".collage-modal__type");
+const collageModalTitle = collageModal.querySelector("#collage-modal-title");
+const collageModalDesc = collageModal.querySelector(".collage-modal__desc");
+const collageModalLink = collageModal.querySelector(".collage-modal__link");
+const collageModalClose = collageModal.querySelector(".collage-modal__close");
+let lastCollageFocus = null;
+
+function openCollageModal(item) {
+  const img = item.querySelector("img");
+  collageModalImg.src = img.currentSrc || img.src;
+  collageModalImg.alt = img.alt;
+  collageModalType.textContent = item.dataset.type || "";
+  collageModalTitle.textContent = item.dataset.title || "";
+  collageModalDesc.textContent = item.dataset.desc || "";
+  collageModalLink.href = item.dataset.link || "https://www.instagram.com/casarenaca/";
+  lastCollageFocus = item;
+  collageModal.hidden = false;
+  document.body.style.overflow = "hidden";
+  collageModalClose.focus();
+}
+
+function closeCollageModal() {
+  if (collageModal.hidden) return;
+  collageModal.hidden = true;
+  document.body.style.overflow = "";
+  if (lastCollageFocus) lastCollageFocus.focus();
+}
+
+collageItems.forEach((item) => {
+  item.addEventListener("click", () => openCollageModal(item));
+});
+
+collageModal.querySelectorAll("[data-collage-close]").forEach((element) => {
+  element.addEventListener("click", closeCollageModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !collageModal.hidden) {
+    closeCollageModal();
+  }
+});

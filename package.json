@@ -1,0 +1,12 @@
+{
+  "name": "casa-renaca",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "cf": "^1.0.0-rc.2"
+  }
+}
