@@ -1968,6 +1968,11 @@ h2 em {
     gap: 1.5rem;
   }
 
+  .cuisine__header,
+  .collage__more {
+    display: none;
+  }
+
   .manifesto__kicker {
     padding-top: 0;
   }
